@@ -17,6 +17,7 @@ public final class CONSTANT_POOL {
 		const_info.add(info);
 	}
 
+	//u2
 	public int length(){
 		return const_info.size();
 	}
