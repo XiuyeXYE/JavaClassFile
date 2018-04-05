@@ -1,5 +1,7 @@
 package com.xiuye.classfille;
 
+
+import com.xiuye.attribute.Attributes;
 import com.xiuye.constant.CONSTANT_POOL;
 import com.xiuye.interfaces.Interfaces;
 
@@ -17,6 +19,6 @@ public final class ClassFile {
 	private Interfaces interfaces;//length u2;interfaces length
 
 
-
+	private Attributes attributes ;
 
 }

@@ -1,16 +1,18 @@
 package com.xiuye.constant.info;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public final class CONSTANT_Utf8_info extends CONSTANT_info{
 
 	private final int tag = 1;// u1
-	private int length;// u2
-	private byte[] bytes;// length
+	private List<Byte> bytes;// length u2
 
 	public CONSTANT_Utf8_info() {
+		this.bytes = new ArrayList<>();
 	}
 
-	public CONSTANT_Utf8_info(int length, byte[] bytes) {
-		this.length = length;
+	public CONSTANT_Utf8_info(int length, List<Byte> bytes) {
 		this.bytes = bytes;
 	}
 
@@ -18,19 +20,16 @@ public final class CONSTANT_Utf8_info extends CONSTANT_info{
 		return tag;
 	}
 
-	public int getLength() {
-		return length;
+
+	public void add_utf8_bytes(byte b){
+		this.bytes.add(b);
 	}
 
-	public void setLength(int length) {
-		this.length = length;
-	}
-
-	public byte[] getBytes() {
+	public List<Byte> getBytes() {
 		return bytes;
 	}
 
-	public void setBytes(byte[] bytes) {
+	public void setBytes(List<Byte> bytes) {
 		this.bytes = bytes;
 	}
 
